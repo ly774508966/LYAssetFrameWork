@@ -37,14 +37,15 @@ namespace LYAssetFrameWork
 
         #region 同步加载
 
-        public void LoadAssetBundle(string assetBundleName)
+        public LYAssetBundle LoadAssetBundle(string assetBundleName)
         {
             LYAssetBundle bundle = LYAssetCache.GetBundleCache(assetBundleName);
-            if (bundle == null)
+            if (bundle != null)
             {
-                LoadDependencies(assetBundleName);
+                return bundle;
             }
-            doLoadAssetBundle(assetBundleName);
+            LoadDependencies(assetBundleName);
+            return doLoadAssetBundle(assetBundleName);
         }
 
         public void LoadDependencies(string assetBundleName)
@@ -64,22 +65,24 @@ namespace LYAssetFrameWork
             }
         }
 
-        private void doLoadAssetBundle(string assetBundleName)
+        private LYAssetBundle doLoadAssetBundle(string assetBundleName)
         {
             LYAssetBundle ly_bundle = LYAssetCache.GetBundleCache(assetBundleName);
             if (ly_bundle != null)
             {
                 //保留一次
                 ly_bundle.Retain();
-                return;
+                return ly_bundle;
             }
             AssetBundle bundle = AssetBundle.LoadFromFile(Path.Combine(FolderPath, assetBundleName));
             if (bundle == null)
             {
                 Debug.LogError("AssetBundleName file not exist:" + Path.Combine(FolderPath, assetBundleName));
-                return;
+                return null;
             }
-            LYAssetCache.SetBundleCache(assetBundleName, new LYAssetBundle(bundle, assetBundleName));
+            ly_bundle = new LYAssetBundle(bundle, assetBundleName);
+            LYAssetCache.SetBundleCache(assetBundleName, ly_bundle);
+            return ly_bundle;
         }
 
         #endregion
@@ -106,7 +109,6 @@ namespace LYAssetFrameWork
             if (dependencies.Length > 0)
             {
                 int index = 0;
-                LYAssetBundle ly_bundle;
                 while (index < dependencies.Length)
                 {
                     LYAssetAsynLoader dependLoader = new LYAssetAsynLoader(dependencies[index]);
