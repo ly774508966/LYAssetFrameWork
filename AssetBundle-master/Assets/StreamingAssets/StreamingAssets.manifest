@@ -1,0 +1,14 @@
+ManifestFileVersion: 0
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: testasset
+      Dependencies: {}
+    Info_1:
+      Name: test2
+      Dependencies: {}
+    Info_2:
+      Name: testprefab
+      Dependencies:
+        Dependency_0: testasset
+        Dependency_1: test2

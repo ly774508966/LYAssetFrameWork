@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 747425050
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: ca4d3caeb9c4bf861140a1eaec575739
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9dea23ffc7e96552740e12d1ee5309d8
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/10shengxing.png
+Dependencies: []
