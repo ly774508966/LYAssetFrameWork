@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LYAssetAsynLoader.cs" />
     <Compile Include="LYAssetBundle.cs" />
     <Compile Include="LYAssetCache.cs" />
     <Compile Include="LYAssetManager.cs" />
