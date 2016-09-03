@@ -66,6 +66,7 @@ namespace LYAssetFrameWork
                 Debug.LogError("AssetBundleName file not exist:" + Path.Combine(LYAssetManager.FolderPath, m_assertName));
                 yield break;
             }
+            Debug.Log("AssetBundleName loaded:" + Path.Combine(LYAssetManager.FolderPath, m_assertName));
             LYAssetCache.SetBundleCache(m_assertName, new LYAssetBundle(bundle, m_assertName));
             m_state = State.Loaded;
         }
