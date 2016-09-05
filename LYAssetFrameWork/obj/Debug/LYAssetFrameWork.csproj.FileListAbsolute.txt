@@ -5,3 +5,10 @@ G:\Project\LYAssetFrameWork\LYAssetFrameWork\bin\Debug\UnityEngine.dll
 G:\Project\LYAssetFrameWork\LYAssetFrameWork\obj\Debug\LYAssetFrameWork.csprojResolveAssemblyReference.cache
 G:\Project\LYAssetFrameWork\LYAssetFrameWork\obj\Debug\LYAssetFrameWork.dll
 G:\Project\LYAssetFrameWork\LYAssetFrameWork\obj\Debug\LYAssetFrameWork.pdb
+F:\Project\LYAssetFrameWork\LYAssetFrameWork\bin\Debug\LYAssetFrameWork.dll
+F:\Project\LYAssetFrameWork\LYAssetFrameWork\bin\Debug\LYAssetFrameWork.pdb
+F:\Project\LYAssetFrameWork\LYAssetFrameWork\bin\Debug\UnityEditor.dll
+F:\Project\LYAssetFrameWork\LYAssetFrameWork\bin\Debug\UnityEngine.dll
+F:\Project\LYAssetFrameWork\LYAssetFrameWork\obj\Debug\LYAssetFrameWork.csprojResolveAssemblyReference.cache
+F:\Project\LYAssetFrameWork\LYAssetFrameWork\obj\Debug\LYAssetFrameWork.dll
+F:\Project\LYAssetFrameWork\LYAssetFrameWork\obj\Debug\LYAssetFrameWork.pdb
